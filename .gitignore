@@ -7,3 +7,9 @@
 *.test
 *.out
 bin/
+
+# Ignore Air's temporary files and generated binaries
+tmp/
+air.pid
+air.sock
+*.air
