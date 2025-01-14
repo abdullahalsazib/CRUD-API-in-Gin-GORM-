@@ -1,0 +1,8 @@
+[build]
+  cmd = "go build -o ./tmp/main"
+  bin = "./tmp/main"
+
+[watch]
+  include_ext = ["go", "tmpl", "html", "css", "js"]
+  exclude_dir = ["vendor", "node_modules", "tmp"]
+

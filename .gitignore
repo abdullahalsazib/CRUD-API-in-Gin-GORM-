@@ -1,0 +1,9 @@
+# Ignore .env files
+.env
+.env.*
+
+# Ignore Go build artifacts
+*.exe
+*.test
+*.out
+bin/
