@@ -1,6 +1,8 @@
 package main
 
 import (
+	"os"
+
 	"github.com/abdullahalsazib/crud_app/controllers"
 	"github.com/abdullahalsazib/crud_app/initializers"
 	"github.com/gin-gonic/gin"
@@ -22,5 +24,10 @@ func main() {
 	r.GET("/posts", controllers.PostsIndex)
 	r.GET("/posts/:id", controllers.PostsShow)
 
-	r.Run() // listen and serve on 0.0.0.0:8080
+	// r.Run() // listen and serve on 0.0.0.0:8080
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+	r.Run(":" + port)
 }
